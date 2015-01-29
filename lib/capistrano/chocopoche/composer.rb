@@ -7,8 +7,8 @@ configuration = Capistrano::Configuration.respond_to?(:instance) ?
 
 configuration.load do
 
-  set :shared_children, shared_children + %w(vendor)
-  set :files_symlinks,  files_symlinks  + %w(vendor)
+  set :shared_children, shared_children
+  set :files_symlinks,  files_symlinks
 
   _cset :composer_cli_options, '--dev --quiet'
 
